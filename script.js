@@ -279,6 +279,9 @@ console.log("Thom looks nice in a " + thomShirt + ", " + thomPant + ", and " + t
 // IV. Functions
 
 // A
+function printGreeting(name){
+  return "Hello, " + name + "!"
+}
 console.log(printGreeting("Slimer"));
 
 // B 
@@ -295,7 +298,7 @@ function calculateCube(num) {
 };
 
 // D 
-function isVowel(char) {
+function isAVowel(char) {
   let lower = char.toLowerCase(); 
   return lower === 'a' || lower === 'e' || lower === 'i' || lower === 'o' || lower === 'u';
 };
@@ -383,8 +386,12 @@ const addLocation = () =>{
 }
 
 
-const newLocation = addLocation(newLocation);
-console.log(newLocation);
+const newLocation = (newLocation)=>{
+  user.location = newLocation
+  return user
+}
+newLocation("Dallas")
+console.log(user);
 
 // D
 const addingItems = () =>{
@@ -395,7 +402,7 @@ const addingItems = () =>{
   return user
 };
 
-console.log(user.purchasedarray[2]);
+console.log(user.purchasedarray);
 
 
 // E 
